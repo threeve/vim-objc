@@ -12,4 +12,9 @@ endif
 " start with C syntax
 runtime! syntax/c.vim
 
+" #import
+syn match objcImport display "^\s*\(%:\|#\)\s*import\>\s*["<]" contains=cIncluded
+
+hi def link objcImport Include
+
 let b:current_syntax = "objc"
