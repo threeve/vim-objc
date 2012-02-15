@@ -24,9 +24,17 @@ syn match objcDirective display "@selector\|@encode"
 syn match objcAccess display "@public\|@private\|@protected\|@package"
 syn match objcException display "@try\|@catch\|@finally\|@throw"
 
+" Objective-C extensions
+syn keyword objcBoolean YES NO TRUE FALSE
+syn keyword objcConstant nil Nil
+syn keyword objcType id Class Protocol Method Ivar Category SEL IMP objc_property_t BOOL
+
 hi def link objcImport Include
 hi def link objcDirective Structure
 hi def link objcAccess Statement
 hi def link objcException Exception
+hi def link objcBoolean Boolean
+hi def link objcConstant Constant
+hi def link objcType Type
 
 let b:current_syntax = "objc"
